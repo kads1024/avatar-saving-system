@@ -12,6 +12,11 @@ namespace AvatarSavingSystem
         public int DataVersion;
 
         /// <summary>
+        /// Name of the specified Avatar Data
+        /// </summary>
+        public string DataName;
+
+        /// <summary>
         /// Object's BodyType.
         /// </summary>
         public BodyType BodyType;

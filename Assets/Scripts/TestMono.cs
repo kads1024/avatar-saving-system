@@ -1,20 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using AvatarSavingSystem;
 using UnityEngine;
 
 public class TestMono : MonoBehaviour
 {
+    [SerializeField] AvatarDataManager mngr;
     // Start is called before the first frame update
     void Start()
     {
-        AvatarSavingSystem.AvatarDataManager mngr = new AvatarSavingSystem.AvatarDataManager();
-
-        mngr.SaveToJSON("Assets/SampleAvatar.json");
+        AvatarData temp = GenerateSampleAvatar("Test");
+        mngr.AvatarDatas.Add(temp.DataName, temp);
+        mngr.SaveToJSON(temp.DataName, "Assets/" + temp.DataName + ".json");
     }
 
-    // Update is called once per frame
-    void Update()
+    AvatarData GenerateSampleAvatar(string p_Name)
     {
-        
+        AvatarData sampleData = new AvatarData();
+        sampleData.DataName = p_Name;
+
+        return sampleData;
     }
 }

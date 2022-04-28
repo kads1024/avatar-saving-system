@@ -12,7 +12,9 @@ namespace AvatarSavingSystem
     [CreateAssetMenu(menuName = "Managers/AvatarDataManager", fileName = "AvatarDataManager")]
     public class AvatarDataManager : ScriptableObject
     {
-        [SerializeField] private AvatarDataDictionary _avatarDatas = new AvatarDataDictionary() { };
+        [SerializeField] private AvatarDataDictionary _avatarDatas = new AvatarDataDictionary();
+
+
         public AvatarDataDictionary AvatarDatas 
         { 
             get 

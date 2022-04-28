@@ -32,7 +32,7 @@ namespace AvatarSavingSystem
         public Color TintColor;
 
         /// <summary>
-        /// List of PartSlotData for the avatar
+        /// List of PartSlotData for the avatar like Armor, Helmet, Clothes, Hair, Facial Hair, BodyMarkings, particle effects, etc
         /// </summary>
         public List<PartSlotData> SlotData;
 
@@ -58,17 +58,17 @@ namespace AvatarSavingSystem
         /// <summary>
         /// First color.
         /// </summary>
-        public Color Color1;
+        public Color MainColor;
 
         /// <summary>
         /// Second color.
         /// </summary>
-        public Color Color2;
+        public Color AccentColor;
 
         /// <summary>
         /// Third color.
         /// </summary>
-        public Color Color3;
+        public Color SecondaryAccentColor;
     }
 
     [Serializable]

@@ -1,6 +1,6 @@
 using AvatarSavingSystem;
 using UnityEngine;
-
+using System.Collections.Generic;
 public class TestMono : MonoBehaviour
 {
     [SerializeField] AvatarDataManager mngr;
@@ -16,7 +16,11 @@ public class TestMono : MonoBehaviour
     {
         AvatarData sampleData = new AvatarData();
         sampleData.DataName = p_Name;
-
+        sampleData.SlotData = new List<PartSlotData>();
+        sampleData.SlotData.Add(new PartSlotData());
+        sampleData.SlotData.Add(new PartSlotData());
+        sampleData.bodySegmentData = new List<SegmentScaleData>();
+        sampleData.bodySegmentData.Add(new SegmentScaleData());
         return sampleData;
     }
 

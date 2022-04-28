@@ -57,5 +57,39 @@ namespace AvatarSavingSystem
                 return false;
             }
         }
+
+        /// <summary>
+        /// Load and assign data from a JSON file in a given path to _avatarDatas.
+        /// </summary>
+        /// <param name="p_FilePath">Desired file path.</param>
+        /// <returns>Returns 'true' on success, otherwise 'false'.</returns>
+        public bool LoadFromJSON(string p_FilePath)
+        {
+            if (!File.Exists(p_FilePath))
+            {
+                Debug.LogWarning("Load AvatarData '" + name + "' from JSON failed: file doesn't exist");
+                return false;
+            }
+
+            try
+            {
+                AvatarData data = JsonUtility.FromJson<AvatarData>(File.ReadAllText(p_FilePath));
+
+                if (_avatarDatas.ContainsKey(data.DataName))
+                    _avatarDatas[data.DataName] = data;
+                else
+                    _avatarDatas.Add(data.DataName, data);
+              
+                
+                // TODO: Assign and Apply Avatar Data
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("error on load from JSON:\n" + e.ToString());
+                return false;
+            }
+        }
     }
 }

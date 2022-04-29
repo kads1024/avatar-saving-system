@@ -33,12 +33,13 @@ namespace AvatarSavingSystem
 		private int[] CurrentlyEquippedParts;
 
 		/// <summary>
-		/// Get the required Animation/Animator
+		/// Find attached animation and animator on Awake
 		/// </summary>
-        private void Awake()
+		private void Awake()
         {
-			Reset();
-        }
+			LegacyAnimation = GetComponent<Animation>();
+			Animator = GetComponent<Animator>();
+		}
 
         /// <summary>
         /// Attach default parts on all required slots.
@@ -52,7 +53,7 @@ namespace AvatarSavingSystem
 		}
 
 		/// <summary>
-		/// Find attached animation and animator.
+		/// Find attached animation and animator on Reset
 		/// </summary>
 		private void Reset()
 		{

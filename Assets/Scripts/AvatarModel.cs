@@ -62,6 +62,38 @@ namespace AvatarSavingSystem
 		}
 
 		/// <summary>
+		/// Start animating with a new legacy animation.
+		/// </summary>
+		/// <param name="animation">Animation to use.</param>
+		public void Rebind(Animation animation)
+		{
+			LegacyAnimation = animation;
+			if (PartAttachments != null)
+			{
+				foreach (PartAttachment attachment in PartAttachments)
+				{
+					if (attachment != null) attachment.Rebind(animation);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Start animating with a new animation controller.
+		/// </summary>
+		/// <param name="animator">Animator to use.</param>
+		public void Rebind(Animator animator)
+		{
+			Animator = animator;
+			if (PartAttachments != null)
+			{
+				foreach (PartAttachment attachment in PartAttachments)
+				{
+					if (attachment != null) attachment.Rebind(animator);
+				}
+			}
+		}
+
+		/// <summary>
 		/// Replace prefab on a specific slot.
 		/// </summary>
 		/// <param name="p_Slot">Slot to be inserted.</param>
@@ -94,7 +126,9 @@ namespace AvatarSavingSystem
 			PartAttachments[p_Slot] = Instantiate(Slots[p_Slot].PartAttachments[p_PartIndex], transform);
 			CurrentlyEquippedParts[p_Slot] = p_PartIndex;
 
-			// TODO: REBIND ANIMATIONS?
+			// Rebind animator in case any new
+			if (Animator != null) PartAttachments[p_Slot].Rebind(Animator);
+			if (LegacyAnimation != null) PartAttachments[p_Slot].Rebind(LegacyAnimation);
 
 			// Detach any conflicts
 			foreach (int conflict in Slots[p_Slot].Conflicts)

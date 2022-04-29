@@ -1,0 +1,246 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3919043336664414965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3919043336664114901}
+  - component: {fileID: 3919043336671791457}
+  - component: {fileID: 3919043336664513538}
+  m_Layer: 0
+  m_Name: RobotHumanoid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3919043336664114901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919043336664414965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3919043336671791457
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919043336664414965}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 3d9d481b4b4a68549a0ae989f331cb62, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: '
+
+    Transform ''index_03_l'' has been deleted
+
+    Transform
+    ''index_02_l'' has been deleted
+
+    Transform ''index_01_l'' has been deleted
+
+    Transform
+    ''middle_03_l'' has been deleted
+
+    Transform ''middle_02_l'' has been deleted
+
+    Transform
+    ''middle_01_l'' has been deleted
+
+    Transform ''pinky_03_l'' has been deleted
+
+    Transform
+    ''pinky_02_l'' has been deleted
+
+    Transform ''pinky_01_l'' has been deleted
+
+    Transform
+    ''ring_03_l'' has been deleted
+
+    Transform ''ring_02_l'' has been deleted
+
+    Transform
+    ''ring_01_l'' has been deleted
+
+    Transform ''thumb_03_l'' has been deleted
+
+    Transform
+    ''thumb_02_l'' has been deleted
+
+    Transform ''thumb_01_l'' has been deleted
+
+    Transform
+    ''hand_l'' has been deleted
+
+    Transform ''lowerarm_l'' has been deleted
+
+    Transform
+    ''upperarm_l'' has been deleted
+
+    Transform ''clavicle_l'' has been deleted
+
+    Transform
+    ''index_03_r'' has been deleted
+
+    Transform ''index_02_r'' has been deleted
+
+    Transform
+    ''index_01_r'' has been deleted
+
+    Transform ''middle_03_r'' has been deleted
+
+    Transform
+    ''middle_02_r'' has been deleted
+
+    Transform ''middle_01_r'' has been deleted
+
+    Transform
+    ''pinky_03_r'' has been deleted
+
+    Transform ''pinky_02_r'' has been deleted
+
+    Transform
+    ''pinky_01_r'' has been deleted
+
+    Transform ''ring_03_r'' has been deleted
+
+    Transform
+    ''ring_02_r'' has been deleted
+
+    Transform ''ring_01_r'' has been deleted
+
+    Transform
+    ''thumb_03_r'' has been deleted
+
+    Transform ''thumb_02_r'' has been deleted
+
+    Transform
+    ''thumb_01_r'' has been deleted
+
+    Transform ''hand_r'' has been deleted
+
+    Transform
+    ''lowerarm_r'' has been deleted
+
+    Transform ''upperarm_r'' has been deleted
+
+    Transform
+    ''clavicle_r'' has been deleted
+
+    Transform ''head'' has been deleted
+
+    Transform
+    ''neck_01'' has been deleted
+
+    Transform ''spine_03'' has been deleted
+
+    Transform
+    ''spine_02'' has been deleted
+
+    Transform ''spine_01'' has been deleted
+
+    Transform
+    ''ball_l'' has been deleted
+
+    Transform ''foot_l'' has been deleted
+
+    Transform
+    ''calf_l'' has been deleted
+
+    Transform ''thigh_l'' has been deleted
+
+    Transform
+    ''ball_r'' has been deleted
+
+    Transform ''foot_r'' has been deleted
+
+    Transform
+    ''calf_r'' has been deleted
+
+    Transform ''thigh_r'' has been deleted
+
+    Transform
+    ''pelvis'' has been deleted
+
+    Transform ''Root'' has been deleted'
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3919043336664513538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919043336664414965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20b95dc7f7a7844b8c13a0053d7404b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Slots:
+  - Conflicts: 
+    PartAttachments:
+    - {fileID: 7856427725026344466, guid: 7f68e4bf28d066346a0e4f238654ff38, type: 3}
+    - {fileID: 709732418677078554, guid: 0cd8c781ffedc4143ad32abbe1378cf4, type: 3}
+    AssetPath: 
+    Required: 1
+  - Conflicts: 
+    PartAttachments:
+    - {fileID: 2355928653435770178, guid: 1ab1090749320f741a00e728a4b895f7, type: 3}
+    AssetPath: 
+    Required: 1
+  - Conflicts: 
+    PartAttachments:
+    - {fileID: 7405707658673628390, guid: e4c7054c526fb804da1b215a3952e97e, type: 3}
+    AssetPath: 
+    Required: 1
+  - Conflicts: 
+    PartAttachments:
+    - {fileID: 6049059229099393382, guid: b4f2613e14e81ee42ae07b2a520439b4, type: 3}
+    AssetPath: 
+    Required: 1
+  - Conflicts: 
+    PartAttachments:
+    - {fileID: 4131335468169166459, guid: 86ac46c2e249b8740bc053d80acf8da6, type: 3}
+    AssetPath: 
+    Required: 1
+  - Conflicts: 
+    PartAttachments:
+    - {fileID: 3440544241450364204, guid: 734f2615407b5704dbb52dd3ec8ef4fa, type: 3}
+    AssetPath: 
+    Required: 1
+  - Conflicts: 
+    PartAttachments:
+    - {fileID: 8673660402295866593, guid: ccba9bde91bfe564d896f86847109297, type: 3}
+    AssetPath: 
+    Required: 1
+  - Conflicts: 
+    PartAttachments:
+    - {fileID: 4487207374950367138, guid: 632d3345b83286e4293c53663beb8ff0, type: 3}
+    AssetPath: 
+    Required: 1
+  - Conflicts: 
+    PartAttachments:
+    - {fileID: 5840074007018525747, guid: 18d7417a4b7c56b4fbaa5c5fe224e958, type: 3}
+    AssetPath: 
+    Required: 1
+  LegacyAnimation: {fileID: 0}
+  Animator: {fileID: 3919043336671791457}

@@ -6,16 +6,11 @@ using UnityEngine;
 
 namespace AvatarSavingSystem
 {
-    [Serializable]
-    public class AvatarDataDictionary : Dictionary<string, AvatarData> { }
-
     [CreateAssetMenu(menuName = "Managers/AvatarDataManager", fileName = "AvatarDataManager")]
     public class AvatarDataManager : ScriptableObject
     {
-        [SerializeField] private AvatarDataDictionary _avatarDatas = new AvatarDataDictionary();
-
-
-        public AvatarDataDictionary AvatarDatas 
+        private Dictionary<string, AvatarData> _avatarDatas = new Dictionary<string, AvatarData>();
+        public Dictionary<string, AvatarData> AvatarDatas 
         { 
             get 
             {
@@ -35,8 +30,7 @@ namespace AvatarSavingSystem
         /// <returns>Returns 'true' on success, otherwise 'false'.</returns>
         public bool SaveToJSON(string p_AvatarKey, string p_FilePath)
         {
-            try
-            {
+            try {
                 if (!_avatarDatas.ContainsKey(p_AvatarKey)) throw new Exception("ERROR: INVALID AVATAR DATA KEY");
 
                 AvatarData data = _avatarDatas[p_AvatarKey];
@@ -53,8 +47,7 @@ namespace AvatarSavingSystem
                 File.WriteAllText(p_FilePath, content);
                 return true;
             }
-            catch (Exception e)
-            {
+            catch (Exception e) {
                 Debug.LogError("error on save to JSON:\n" + e.ToString());
                 return false;
             }

@@ -148,8 +148,9 @@ namespace AvatarSavingSystem
 			PartAttachments[p_Slot].ApplyPartData(texture, main, accent, secondaryAccent);
 
 			// Apply Blendshapes
-			foreach(SegmentScaleData bodySegment in _slots[p_Slot].SlotData.BodySegmentData)
-				PartAttachments[p_Slot].ApplySegmentScale(bodySegment.SegmentIndex, bodySegment.Scale);
+			if(_slots[p_Slot].SlotData.BodySegmentData != null) 
+				foreach(SegmentScaleData bodySegment in _slots[p_Slot].SlotData.BodySegmentData)
+					PartAttachments[p_Slot].ApplySegmentScale(bodySegment.SegmentIndex, bodySegment.Scale);
 			
 			
 
@@ -205,5 +206,13 @@ namespace AvatarSavingSystem
 				p_Array[i] = p_Value;
 			
 		}
+
+		public void SaveAvatarConfiguration()
+        {
+			for (int i = 0; i < _slots.Count; i++)            
+				_dataManager.AvatarDatas[_avatarID].SlotData[i] = _slots[i].SlotData;
+
+			_dataManager.SaveToJSON(_avatarID, "Assets/" + _avatarID + ".json");
+        }
 	}
 }

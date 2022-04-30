@@ -1,5 +1,5 @@
 {
-    "DataVersion": 1,
+    "DataVersion": 2,
     "DataName": "Humanoid00",
     "SlotData": [
         {
@@ -8,31 +8,35 @@
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
-            "SecondaryAccentColorIndex": 0
+            "SecondaryAccentColorIndex": 0,
+            "BodySegmentData": []
         },
         {
-            "SlotIndex": 1,
-            "PartID": "Base1",
-            "TextureIndex": 0,
-            "MainColorIndex": 1,
-            "AccentColorIndex": 0,
-            "SecondaryAccentColorIndex": 0
-        },
-        {
-            "SlotIndex": 2,
-            "PartID": "Base2",
-            "TextureIndex": 1,
-            "MainColorIndex": 1,
-            "AccentColorIndex": 0,
-            "SecondaryAccentColorIndex": 0
-        },
-        {
-            "SlotIndex": 3,
+            "SlotIndex": 0,
             "PartID": "",
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
-            "SecondaryAccentColorIndex": 0
+            "SecondaryAccentColorIndex": 0,
+            "BodySegmentData": []
+        },
+        {
+            "SlotIndex": 0,
+            "PartID": "",
+            "TextureIndex": 0,
+            "MainColorIndex": 0,
+            "AccentColorIndex": 0,
+            "SecondaryAccentColorIndex": 0,
+            "BodySegmentData": []
+        },
+        {
+            "SlotIndex": 0,
+            "PartID": "",
+            "TextureIndex": 0,
+            "MainColorIndex": 0,
+            "AccentColorIndex": 0,
+            "SecondaryAccentColorIndex": 0,
+            "BodySegmentData": []
         },
         {
             "SlotIndex": 4,
@@ -40,7 +44,8 @@
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
-            "SecondaryAccentColorIndex": 0
+            "SecondaryAccentColorIndex": 0,
+            "BodySegmentData": []
         },
         {
             "SlotIndex": 5,
@@ -48,23 +53,26 @@
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
-            "SecondaryAccentColorIndex": 0
+            "SecondaryAccentColorIndex": 0,
+            "BodySegmentData": []
         },
         {
-            "SlotIndex": 6,
+            "SlotIndex": 0,
             "PartID": "",
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
-            "SecondaryAccentColorIndex": 0
+            "SecondaryAccentColorIndex": 0,
+            "BodySegmentData": []
         },
         {
-            "SlotIndex": 7,
+            "SlotIndex": 0,
             "PartID": "",
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
-            "SecondaryAccentColorIndex": 0
+            "SecondaryAccentColorIndex": 0,
+            "BodySegmentData": []
         },
         {
             "SlotIndex": 8,
@@ -72,8 +80,8 @@
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
-            "SecondaryAccentColorIndex": 0
+            "SecondaryAccentColorIndex": 0,
+            "BodySegmentData": []
         }
-    ],
-    "BodySegmentData": []
+    ]
 }

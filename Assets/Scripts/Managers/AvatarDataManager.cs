@@ -34,6 +34,8 @@ namespace AvatarSavingSystem
                 if (!_avatarDatas.ContainsKey(p_AvatarKey)) throw new Exception("ERROR: INVALID AVATAR DATA KEY");
 
                 AvatarData data = _avatarDatas[p_AvatarKey];
+                data.DataName = p_AvatarKey;
+                data.DataVersion++;
 
                 string content = JsonUtility.ToJson(data, true);
                 string directory = Path.GetDirectoryName(p_FilePath);

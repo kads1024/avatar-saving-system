@@ -28,7 +28,7 @@ public class TestMono : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log("SAVING");
-            mngr.SaveToJSON(SampleAvatarID, "Assets/" + SampleAvatarID + ".json");
+            SampleAvatar.SaveAvatarConfiguration();
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -45,7 +45,6 @@ public class TestMono : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log(mngr.AvatarDatas[SampleAvatarID].SlotData.Count);
             Debug.Log(JsonUtility.ToJson(mngr.AvatarDatas[SampleAvatarID], true));
         }
 

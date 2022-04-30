@@ -17,21 +17,6 @@ namespace AvatarSavingSystem
         public string DataName;
 
         /// <summary>
-        /// Object's BodyType.
-        /// </summary>
-        public BodyType BodyType;
-
-        /// <summary>
-        /// Object's skin color.
-        /// </summary>
-        public Color SkinColor;
-
-        /// <summary>
-        /// Object's tint color.
-        /// </summary>
-        public Color TintColor;
-
-        /// <summary>
         /// List of PartSlotData for the avatar like Armor, Helmet, Clothes, Hair, Facial Hair, BodyMarkings, particle effects, etc
         /// </summary>
         public List<PartSlotData> SlotData;
@@ -39,7 +24,15 @@ namespace AvatarSavingSystem
         /// <summary>
         /// List of SegmentScaleData
         /// </summary>
-        public List<SegmentScaleData> bodySegmentData;
+        public List<SegmentScaleData> BodySegmentData;
+
+        public AvatarData(int p_DataVersion, string p_DataName, int p_SlotCapacity, int p_SegmentCapacity)
+        {
+            DataVersion = p_DataVersion;
+            DataName = p_DataName;
+            SlotData = new List<PartSlotData>(p_SlotCapacity);
+            BodySegmentData = new List<SegmentScaleData>(p_SegmentCapacity);
+        }
     }
 
     [Serializable]
@@ -56,19 +49,24 @@ namespace AvatarSavingSystem
         public string PartID;
 
         /// <summary>
+        /// Texture.
+        /// </summary>
+        public int TextureIndex;
+
+        /// <summary>
         /// First color.
         /// </summary>
-        public Color MainColor;
+        public int MainColorIndex;
 
         /// <summary>
         /// Second color.
         /// </summary>
-        public Color AccentColor;
+        public int AccentColorIndex;
 
         /// <summary>
         /// Third color.
         /// </summary>
-        public Color SecondaryAccentColor;
+        public int SecondaryAccentColorIndex;
     }
 
     [Serializable]

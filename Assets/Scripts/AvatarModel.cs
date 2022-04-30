@@ -8,6 +8,16 @@ namespace AvatarSavingSystem
     public class AvatarModel : MonoBehaviour
     {
 		/// <summary>
+		/// Avatar ID of this model
+		/// </summary>
+		[SerializeField] private string _avatarID;
+
+		/// <summary>
+		/// Avatar Data Manager
+		/// </summary>
+		[SerializeField]  private AvatarDataManager _dataManager;
+
+		/// <summary>
 		/// All slots where parts are to be inserted.
 		/// </summary>
 		public List<AvatarPartSlot> Slots;
@@ -40,9 +50,16 @@ namespace AvatarSavingSystem
         /// Attach default parts on all required slots.
         /// </summary>
         private void Start()
-		{	
+		{
+			// Initialize Data for this model into the datamanager
+			if (!_dataManager.AvatarDatas.ContainsKey(_avatarID))
+			{
+				AvatarData newData = new AvatarData(1, _avatarID, Slots.Count, 0);
+				_dataManager.AvatarDatas.Add(_avatarID, newData);
+			}
+
 			for (int slot = 0; slot < Slots.Count; slot++)
-				if(Slots[slot].Required) Attach(slot, "Base" + slot.ToString());	
+				if(Slots[slot].Required) Attach(slot, "Base" + slot.ToString());		
 		}
 
 		/// <summary>
@@ -111,12 +128,16 @@ namespace AvatarSavingSystem
 
 			// Resize the part attachments to match the same size as the slots
 			Resize(ref PartAttachments, Slots.Count, null);
-
+			
 			// If attachment already exists, destroy it
 			if (PartAttachments[p_Slot] != null) Destroy(PartAttachments[p_Slot].gameObject);
 
-			// Instantiate the new attachement and save it in both the attachment list
+			// Instantiate the new attachement and save it in the attachment list
 			PartAttachments[p_Slot] = Instantiate(avatarPart.PartPrefab, transform);
+
+			// Save Slot Data
+			if(_dataManager.AvatarDatas[_avatarID].SlotData.Count > p_Slot)
+				Slots[p_Slot].SlotData = _dataManager.AvatarDatas[_avatarID].SlotData[p_Slot];
 
 			// Rebind animator in case any new
 			if (Animator != null) PartAttachments[p_Slot].Rebind(Animator);

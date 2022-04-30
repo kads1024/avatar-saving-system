@@ -399,9 +399,17 @@ PrefabInstance:
       value: RobotHumanoid
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _avatarID
+      value: Humanoid00
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: MaximumSlots
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _dataManager
+      value: 
+      objectReference: {fileID: 11400000, guid: 67390c8fce678f74caa25438f027d568, type: 2}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: Slots.Array.size
       value: 9

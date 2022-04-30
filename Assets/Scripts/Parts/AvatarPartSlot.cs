@@ -11,6 +11,12 @@ namespace AvatarSavingSystem
 		public string SlotName;
 
 		/// <summary>
+		/// Data of the Slot
+		/// </summary>
+		[NonSerialized]
+		public PartSlotData SlotData;
+
+		/// <summary>
 		/// Which slots are incompatible with this slot.
 		/// </summary>
 		public int[] Conflicts;

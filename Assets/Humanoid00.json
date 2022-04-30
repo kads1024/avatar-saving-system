@@ -1,10 +1,10 @@
 {
-    "DataVersion": 2,
+    "DataVersion": 5,
     "DataName": "Humanoid00",
     "SlotData": [
         {
             "SlotIndex": 0,
-            "PartID": "",
+            "PartID": "Arms00",
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
@@ -13,7 +13,7 @@
         },
         {
             "SlotIndex": 1,
-            "PartID": "",
+            "PartID": "Boot00",
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
@@ -22,25 +22,25 @@
         },
         {
             "SlotIndex": 2,
-            "PartID": "",
+            "PartID": "Glove00",
             "TextureIndex": 0,
-            "MainColorIndex": 0,
+            "MainColorIndex": 1,
             "AccentColorIndex": 0,
             "SecondaryAccentColorIndex": 0,
             "BodySegmentData": []
         },
         {
             "SlotIndex": 3,
-            "PartID": "",
+            "PartID": "Hat00",
             "TextureIndex": 0,
-            "MainColorIndex": 0,
+            "MainColorIndex": 2,
             "AccentColorIndex": 0,
             "SecondaryAccentColorIndex": 0,
             "BodySegmentData": []
         },
         {
             "SlotIndex": 4,
-            "PartID": "",
+            "PartID": "Head00",
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
@@ -49,7 +49,7 @@
         },
         {
             "SlotIndex": 5,
-            "PartID": "",
+            "PartID": "Leg00",
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
@@ -58,16 +58,16 @@
         },
         {
             "SlotIndex": 6,
-            "PartID": "",
+            "PartID": "Pants00",
             "TextureIndex": 0,
-            "MainColorIndex": 0,
+            "MainColorIndex": 2,
             "AccentColorIndex": 0,
             "SecondaryAccentColorIndex": 0,
             "BodySegmentData": []
         },
         {
             "SlotIndex": 7,
-            "PartID": "",
+            "PartID": "Shirt00",
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
@@ -76,7 +76,7 @@
         },
         {
             "SlotIndex": 8,
-            "PartID": "",
+            "PartID": "Torso00",
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,
@@ -85,7 +85,7 @@
         },
         {
             "SlotIndex": 9,
-            "PartID": "",
+            "PartID": "Rifle00",
             "TextureIndex": 0,
             "MainColorIndex": 0,
             "AccentColorIndex": 0,

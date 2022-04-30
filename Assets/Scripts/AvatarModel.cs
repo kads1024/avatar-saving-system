@@ -60,8 +60,13 @@ namespace AvatarSavingSystem
 				_dataManager.AvatarDatas.Add(_avatarID, newData);
 			}
 
+
 			for (int slot = 0; slot < _slots.Count; slot++)
-				if(_slots[slot].Required) Attach(slot, "Base" + slot.ToString());		
+            {
+				PartSlotData data = new PartSlotData(slot, "Base" + slot, 0, 0, 0, 0, 0);
+				if (_slots[slot].Required) Attach(data);
+			}
+				
 		}
 
 		/// <summary>
@@ -108,23 +113,22 @@ namespace AvatarSavingSystem
 		/// <summary>
 		/// Replace prefab on a specific slot.
 		/// </summary>
-		/// <param name="p_Slot">Slot to be inserted.</param>
-		/// <param name="p_PartName">Part to be used.</param>
-		public void Attach(int p_Slot, string p_PartName)
+		/// <param name="p_PartSlotData">Part to be used.</param>
+		public void Attach(PartSlotData p_PartSlotData)
 		{
 			
 			// Check if provided slot is valid
-			if (p_Slot < 0 || p_Slot >= _slots.Count)
+			if (p_PartSlotData.SlotIndex < 0 || p_PartSlotData.SlotIndex >= _slots.Count)
 			{
-				Debug.LogWarning("Slot " + p_Slot + " not found.", this);
+				Debug.LogWarning("Slot " + p_PartSlotData.SlotIndex + " not found.", this);
 				return;
 			}
 
 			// Check if provided part is valid
-			AvatarPart avatarPart = Resources.Load<AvatarPart>(AVATAR_PARTS_PATH + _slots[p_Slot].SlotName + "/" + p_PartName);
+			AvatarPart avatarPart = Resources.Load<AvatarPart>(AVATAR_PARTS_PATH + _slots[p_PartSlotData.SlotIndex].SlotName + "/" + p_PartSlotData.PartID);
 			if (avatarPart == null || avatarPart.PartPrefab == null)
 			{
-				Debug.LogWarning("Part " + p_PartName + " on slot " + p_Slot + " not found.", this);
+				Debug.LogWarning("Part " + p_PartSlotData.PartID + " on slot " + p_PartSlotData.SlotIndex + " not found.", this);
 				return;
 			}
 
@@ -132,43 +136,43 @@ namespace AvatarSavingSystem
 			Resize(ref PartAttachments, _slots.Count, null);
 			
 			// If attachment already exists, destroy it
-			if (PartAttachments[p_Slot] != null) Destroy(PartAttachments[p_Slot].gameObject);
+			if (PartAttachments[p_PartSlotData.SlotIndex] != null) Destroy(PartAttachments[p_PartSlotData.SlotIndex].gameObject);
 
 			// Instantiate the new attachement and save it in the attachment list
-			PartAttachments[p_Slot] = Instantiate(avatarPart.PartPrefab, transform);
+			PartAttachments[p_PartSlotData.SlotIndex] = Instantiate(avatarPart.PartPrefab, transform);
 
 			// Save Slot Data
-			if(_dataManager.AvatarDatas[_avatarID].SlotData.Count > p_Slot)
+			if(_dataManager.AvatarDatas[_avatarID].SlotData.Count > p_PartSlotData.SlotIndex)
             {
-				Debug.Log("Saving Slot: " + p_Slot, this);
-				_slots[p_Slot].SlotData = _dataManager.AvatarDatas[_avatarID].SlotData[p_Slot];
+				Debug.Log("Saving Slot: " + p_PartSlotData.SlotIndex, this);
+				_slots[p_PartSlotData.SlotIndex].SlotData = p_PartSlotData;
 			}
 				
 
 			// Apply Texture and Color
-			Texture texture = _slots[p_Slot].SlotData.TextureIndex < avatarPart.Textures.Count ? avatarPart.Textures[_slots[p_Slot].SlotData.TextureIndex] : avatarPart.Textures[0];
-			Color main = _slots[p_Slot].SlotData.MainColorIndex < avatarPart.MainColors.Count ? avatarPart.MainColors[_slots[p_Slot].SlotData.MainColorIndex] : avatarPart.MainColors[0];
-			Color accent = _slots[p_Slot].SlotData.AccentColorIndex < avatarPart.AccentColors.Count ? avatarPart.AccentColors[_slots[p_Slot].SlotData.AccentColorIndex] : avatarPart.AccentColors[0];
-			Color secondaryAccent = _slots[p_Slot].SlotData.SecondaryAccentColorIndex < avatarPart.SecondaryAccentColors.Count ? avatarPart.SecondaryAccentColors[_slots[p_Slot].SlotData.SecondaryAccentColorIndex] : avatarPart.SecondaryAccentColors[0];
+			Texture texture = p_PartSlotData.TextureIndex < avatarPart.Textures.Count ? avatarPart.Textures[p_PartSlotData.TextureIndex] : avatarPart.Textures[0];
+			Color main = p_PartSlotData.MainColorIndex < avatarPart.MainColors.Count ? avatarPart.MainColors[p_PartSlotData.MainColorIndex] : avatarPart.MainColors[0];
+			Color accent = p_PartSlotData.AccentColorIndex < avatarPart.AccentColors.Count ? avatarPart.AccentColors[p_PartSlotData.AccentColorIndex] : avatarPart.AccentColors[0];
+			Color secondaryAccent = p_PartSlotData.SecondaryAccentColorIndex < avatarPart.SecondaryAccentColors.Count ? avatarPart.SecondaryAccentColors[p_PartSlotData.SecondaryAccentColorIndex] : avatarPart.SecondaryAccentColors[0];
 
-			PartAttachments[p_Slot].ApplyPartData(texture, main, accent, secondaryAccent);
+			PartAttachments[p_PartSlotData.SlotIndex].ApplyPartData(texture, main, accent, secondaryAccent);
 
 			// Apply Blendshapes
-			if(_slots[p_Slot].SlotData.BodySegmentData != null) 
-				foreach(SegmentScaleData bodySegment in _slots[p_Slot].SlotData.BodySegmentData)
-					PartAttachments[p_Slot].ApplySegmentScale(bodySegment.SegmentIndex, bodySegment.Scale);
+			if(p_PartSlotData.BodySegmentData != null) 
+				foreach(SegmentScaleData bodySegment in p_PartSlotData.BodySegmentData)
+					PartAttachments[p_PartSlotData.SlotIndex].ApplySegmentScale(bodySegment.SegmentIndex, bodySegment.Scale);
 			
 			
 
 			// Rebind animator in case any new
-			if (_animator != null) PartAttachments[p_Slot].Rebind(_animator);
-			if (_legacyAnimation != null) PartAttachments[p_Slot].Rebind(_legacyAnimation);
+			if (_animator != null) PartAttachments[p_PartSlotData.SlotIndex].Rebind(_animator);
+			if (_legacyAnimation != null) PartAttachments[p_PartSlotData.SlotIndex].Rebind(_legacyAnimation);
 
 			// Detach any conflicts
-			foreach (int conflict in _slots[p_Slot].Conflicts)
+			foreach (int conflict in _slots[p_PartSlotData.SlotIndex].Conflicts)
 			{
 				if (conflict < 0 || conflict >= _slots.Count) continue;
-				if (conflict == p_Slot) continue;
+				if (conflict == p_PartSlotData.SlotIndex) continue;
 				Detach(conflict);
 			}
 

@@ -293,7 +293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: -0.35}
+  m_LocalPosition: {x: 0, y: 0.1, z: -0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -342,17 +342,94 @@ MonoBehaviour:
   mngr: {fileID: 11400000, guid: 67390c8fce678f74caa25438f027d568, type: 2}
   SampleAvatarID: Humanoid00
   SampleAvatar: {fileID: 1883532556}
-  ArmsID: Arms00
-  BootsID: Boot00
-  GlovesID: Glove00
-  HatsID: Hat00
-  HeadsID: Head00
-  LegsID: Leg00
-  PantsID: Pants00
-  ShirtsID: Shirt00
-  TorsosID: Torso00
-  RiflesID: Rifle00
-  Balls: Ball00
+  ArmsID:
+    SlotIndex: 0
+    PartID: Arms00
+    TextureIndex: 0
+    MainColorIndex: 0
+    AccentColorIndex: 0
+    SecondaryAccentColorIndex: 0
+    BodySegmentData: []
+  BootsID:
+    SlotIndex: 1
+    PartID: Boot00
+    TextureIndex: 0
+    MainColorIndex: 0
+    AccentColorIndex: 0
+    SecondaryAccentColorIndex: 0
+    BodySegmentData: []
+  GlovesID:
+    SlotIndex: 2
+    PartID: Glove00
+    TextureIndex: 0
+    MainColorIndex: 1
+    AccentColorIndex: 0
+    SecondaryAccentColorIndex: 0
+    BodySegmentData: []
+  HatsID:
+    SlotIndex: 3
+    PartID: Hat00
+    TextureIndex: 0
+    MainColorIndex: 2
+    AccentColorIndex: 0
+    SecondaryAccentColorIndex: 0
+    BodySegmentData: []
+  HeadsID:
+    SlotIndex: 4
+    PartID: Head00
+    TextureIndex: 0
+    MainColorIndex: 0
+    AccentColorIndex: 0
+    SecondaryAccentColorIndex: 0
+    BodySegmentData: []
+  LegsID:
+    SlotIndex: 5
+    PartID: Leg00
+    TextureIndex: 0
+    MainColorIndex: 0
+    AccentColorIndex: 0
+    SecondaryAccentColorIndex: 0
+    BodySegmentData: []
+  PantsID:
+    SlotIndex: 6
+    PartID: Pants00
+    TextureIndex: 0
+    MainColorIndex: 2
+    AccentColorIndex: 0
+    SecondaryAccentColorIndex: 0
+    BodySegmentData: []
+  ShirtsID:
+    SlotIndex: 7
+    PartID: Shirt00
+    TextureIndex: 0
+    MainColorIndex: 0
+    AccentColorIndex: 0
+    SecondaryAccentColorIndex: 0
+    BodySegmentData: []
+  TorsosID:
+    SlotIndex: 8
+    PartID: Torso00
+    TextureIndex: 0
+    MainColorIndex: 0
+    AccentColorIndex: 0
+    SecondaryAccentColorIndex: 0
+    BodySegmentData: []
+  RiflesID:
+    SlotIndex: 9
+    PartID: Rifle00
+    TextureIndex: 0
+    MainColorIndex: 0
+    AccentColorIndex: 0
+    SecondaryAccentColorIndex: 0
+    BodySegmentData: []
+  Balls:
+    SlotIndex: 0
+    PartID: 
+    TextureIndex: 0
+    MainColorIndex: 0
+    AccentColorIndex: 0
+    SecondaryAccentColorIndex: 0
+    BodySegmentData: []
 --- !u!4 &1886714582
 Transform:
   m_ObjectHideFlags: 0
@@ -440,7 +517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.size
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: Slots.Array.data[0].Required

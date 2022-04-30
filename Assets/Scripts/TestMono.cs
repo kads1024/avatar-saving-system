@@ -7,17 +7,17 @@ public class TestMono : MonoBehaviour
     [SerializeField] string SampleAvatarID;
     [SerializeField] AvatarModel SampleAvatar;
 
-    [SerializeField] string ArmsID;
-    [SerializeField] string BootsID;
-    [SerializeField] string GlovesID;
-    [SerializeField] string HatsID;
-    [SerializeField] string HeadsID;
-    [SerializeField] string LegsID;
-    [SerializeField] string PantsID;
-    [SerializeField] string ShirtsID;
-    [SerializeField] string TorsosID;
-    [SerializeField] string RiflesID;
-    [SerializeField] string Balls;
+    [SerializeField] PartSlotData ArmsID;
+    [SerializeField] PartSlotData BootsID;
+    [SerializeField] PartSlotData GlovesID;
+    [SerializeField] PartSlotData HatsID;
+    [SerializeField] PartSlotData HeadsID;
+    [SerializeField] PartSlotData LegsID;
+    [SerializeField] PartSlotData PantsID;
+    [SerializeField] PartSlotData ShirtsID;
+    [SerializeField] PartSlotData TorsosID;
+    [SerializeField] PartSlotData RiflesID;
+    [SerializeField] PartSlotData Balls;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +50,7 @@ public class TestMono : MonoBehaviour
             
             foreach(PartSlotData slotData in mngr.AvatarDatas[SampleAvatarID].SlotData)
             {
-                SampleAvatar.Attach(slotData.SlotIndex, slotData.PartID);
+                SampleAvatar.Attach(slotData);
             }
 
         }
@@ -69,15 +69,15 @@ public class TestMono : MonoBehaviour
 
     public void UpdateAvatar()
     {
-        SampleAvatar.Attach(0, ArmsID);
-        SampleAvatar.Attach(1, BootsID);
-        SampleAvatar.Attach(2, GlovesID);
-        SampleAvatar.Attach(3, HatsID);
-        SampleAvatar.Attach(4, HeadsID);
-        SampleAvatar.Attach(5, LegsID);
-        SampleAvatar.Attach(6, PantsID);
-        SampleAvatar.Attach(7, ShirtsID);
-        SampleAvatar.Attach(8, TorsosID);
-        SampleAvatar.Attach(9, RiflesID);
+        SampleAvatar.Attach(ArmsID);
+        SampleAvatar.Attach(BootsID);
+        SampleAvatar.Attach(GlovesID);
+        SampleAvatar.Attach(HatsID);
+        SampleAvatar.Attach(HeadsID);
+        SampleAvatar.Attach(LegsID);
+        SampleAvatar.Attach(PantsID);
+        SampleAvatar.Attach(ShirtsID);
+        SampleAvatar.Attach(TorsosID);
+        SampleAvatar.Attach(RiflesID);
     }
 }

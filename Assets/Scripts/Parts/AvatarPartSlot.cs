@@ -16,11 +16,6 @@ namespace AvatarSavingSystem
 		public PartAttachment[] PartAttachments;
 
 		/// <summary>
-		/// Asset path to load prefabs from.
-		/// </summary>
-		public string AssetPath;
-
-		/// <summary>
 		/// True if slot is required and must not be empty.
 		/// </summary>
 		public bool Required;

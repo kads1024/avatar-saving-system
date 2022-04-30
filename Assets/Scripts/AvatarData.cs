@@ -46,9 +46,9 @@ namespace AvatarSavingSystem
     public struct PartSlotData
     {
         /// <summary>
-        /// Slot on where to insert the part.
+        /// Slot Index on where to insert the part.
         /// </summary>
-        public string Slot;
+        public int SlotIndex;
 
         /// <summary>
         /// Part to be inserted.

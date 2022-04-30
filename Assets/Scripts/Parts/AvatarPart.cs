@@ -13,14 +13,19 @@ namespace AvatarSavingSystem
         public string PartName;
 
         /// <summary>
-        /// Slot on where to insert the part.
+        /// Slot Index on where to insert the part.
         /// </summary>
-        public string Slot;
+        public int SlotIndex;
 
         /// <summary>
         /// Actual Prefab that will be inserted to the slot
         /// </summary>
         public PartAttachment PartPrefab;
+
+        /// <summary>
+        /// List of Valid Textures for the object
+        /// </summary>
+        public List<Texture> Textures;
 
         /// <summary>
         /// List of valid Main colors for the part.
@@ -33,7 +38,7 @@ namespace AvatarSavingSystem
         public List<Color> AccentColors;
 
         /// <summary>
-        ///List of valid Secondary Accent colors for the part.
+        /// List of valid Secondary Accent colors for the part.
         /// </summary>
         public List<Color> SecondaryAccentColors;
     }

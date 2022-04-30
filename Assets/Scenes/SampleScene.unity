@@ -398,6 +398,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: RobotHumanoid
       objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[0].PartAttachments.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[0].PartAttachments.Array.data[0]
+      value: 
+      objectReference: {fileID: 5840074007018525747, guid: 18d7417a4b7c56b4fbaa5c5fe224e958, type: 3}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[1].PartAttachments.Array.data[0]
+      value: 
+      objectReference: {fileID: 5840074007018525747, guid: 18d7417a4b7c56b4fbaa5c5fe224e958, type: 3}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[2].PartAttachments.Array.data[0]
+      value: 
+      objectReference: {fileID: 5840074007018525747, guid: 18d7417a4b7c56b4fbaa5c5fe224e958, type: 3}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[3].PartAttachments.Array.data[0]
+      value: 
+      objectReference: {fileID: 5840074007018525747, guid: 18d7417a4b7c56b4fbaa5c5fe224e958, type: 3}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[4].PartAttachments.Array.data[0]
+      value: 
+      objectReference: {fileID: 5840074007018525747, guid: 18d7417a4b7c56b4fbaa5c5fe224e958, type: 3}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[5].PartAttachments.Array.data[0]
+      value: 
+      objectReference: {fileID: 5840074007018525747, guid: 18d7417a4b7c56b4fbaa5c5fe224e958, type: 3}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[6].PartAttachments.Array.data[0]
+      value: 
+      objectReference: {fileID: 5840074007018525747, guid: 18d7417a4b7c56b4fbaa5c5fe224e958, type: 3}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[7].PartAttachments.Array.data[0]
+      value: 
+      objectReference: {fileID: 5840074007018525747, guid: 18d7417a4b7c56b4fbaa5c5fe224e958, type: 3}
+    - target: {fileID: 3919043336671791457, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 04f71a694db68d34394a5f6c358e92c7, type: 2}
     - target: {fileID: 3919043336671791457, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: m_WarningMessage
       value: 

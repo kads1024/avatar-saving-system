@@ -21,8 +21,6 @@ namespace AvatarSavingSystem
         /// </summary>
         public List<PartSlotData> SlotData;
 
-        
-
         public AvatarData(int p_DataVersion, string p_DataName, int p_SlotCapacity)
         {
             DataVersion = p_DataVersion;

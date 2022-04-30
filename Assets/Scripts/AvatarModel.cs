@@ -54,7 +54,7 @@ namespace AvatarSavingSystem
 			// Initialize Data for this model into the datamanager
 			if (!_dataManager.AvatarDatas.ContainsKey(_avatarID))
 			{
-				AvatarData newData = new AvatarData(1, _avatarID, _slots.Count, 0);
+				AvatarData newData = new AvatarData(1, _avatarID, _slots.Count);
 				_dataManager.AvatarDatas.Add(_avatarID, newData);
 			}
 
@@ -146,6 +146,12 @@ namespace AvatarSavingSystem
 			Color secondaryAccent = _slots[p_Slot].SlotData.SecondaryAccentColorIndex < avatarPart.SecondaryAccentColors.Count ? avatarPart.SecondaryAccentColors[_slots[p_Slot].SlotData.SecondaryAccentColorIndex] : avatarPart.SecondaryAccentColors[0];
 
 			PartAttachments[p_Slot].ApplyPartData(texture, main, accent, secondaryAccent);
+
+			// Apply Blendshapes
+			foreach(SegmentScaleData bodySegment in _slots[p_Slot].SlotData.BodySegmentData)
+				PartAttachments[p_Slot].ApplySegmentScale(bodySegment.SegmentIndex, bodySegment.Scale);
+			
+			
 
 			// Rebind animator in case any new
 			if (_animator != null) PartAttachments[p_Slot].Rebind(_animator);

@@ -20,8 +20,6 @@ public class TestMono : MonoBehaviour
         sampleData.SlotData = new List<PartSlotData>();
         sampleData.SlotData.Add(new PartSlotData());
         sampleData.SlotData.Add(new PartSlotData());
-        sampleData.BodySegmentData = new List<SegmentScaleData>();
-        sampleData.BodySegmentData.Add(new SegmentScaleData());
         return sampleData;
     }
 

@@ -140,11 +140,12 @@ namespace AvatarSavingSystem
 				_slots[p_Slot].SlotData = _dataManager.AvatarDatas[_avatarID].SlotData[p_Slot];
 
 			// Apply Texture and Color
-			PartAttachments[p_Slot].ApplyPartData(
-				avatarPart.Textures[_slots[p_Slot].SlotData.TextureIndex], 
-				avatarPart.MainColors[_slots[p_Slot].SlotData.MainColorIndex], 
-				avatarPart.AccentColors[_slots[p_Slot].SlotData.AccentColorIndex], 
-				avatarPart.SecondaryAccentColors[_slots[p_Slot].SlotData.SecondaryAccentColorIndex]);
+			Texture texture = _slots[p_Slot].SlotData.TextureIndex < avatarPart.Textures.Count ? avatarPart.Textures[_slots[p_Slot].SlotData.TextureIndex] : avatarPart.Textures[0];
+			Color main = _slots[p_Slot].SlotData.MainColorIndex < avatarPart.MainColors.Count ? avatarPart.MainColors[_slots[p_Slot].SlotData.MainColorIndex] : avatarPart.MainColors[0];
+			Color accent = _slots[p_Slot].SlotData.AccentColorIndex < avatarPart.AccentColors.Count ? avatarPart.AccentColors[_slots[p_Slot].SlotData.AccentColorIndex] : avatarPart.AccentColors[0];
+			Color secondaryAccent = _slots[p_Slot].SlotData.SecondaryAccentColorIndex < avatarPart.SecondaryAccentColors.Count ? avatarPart.SecondaryAccentColors[_slots[p_Slot].SlotData.SecondaryAccentColorIndex] : avatarPart.SecondaryAccentColors[0];
+
+			PartAttachments[p_Slot].ApplyPartData(texture, main, accent, secondaryAccent);
 
 			// Rebind animator in case any new
 			if (_animator != null) PartAttachments[p_Slot].Rebind(_animator);

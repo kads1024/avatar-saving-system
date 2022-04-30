@@ -21,7 +21,7 @@
         {
             "SlotIndex": 2,
             "PartID": "Base2",
-            "TextureIndex": 0,
+            "TextureIndex": 1,
             "MainColorIndex": 1,
             "AccentColorIndex": 0,
             "SecondaryAccentColorIndex": 0

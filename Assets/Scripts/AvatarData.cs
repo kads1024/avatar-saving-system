@@ -53,7 +53,7 @@ namespace AvatarSavingSystem
         /// <summary>
         /// Part to be inserted.
         /// </summary>
-        public string PartName;
+        public string PartID;
 
         /// <summary>
         /// First color.

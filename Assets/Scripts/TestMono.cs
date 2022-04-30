@@ -5,6 +5,7 @@ public class TestMono : MonoBehaviour
 {
     [SerializeField] AvatarDataManager mngr;
     [SerializeField] string SampleAvatarID;
+    [SerializeField] AvatarModel SampleAvatar;
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +30,19 @@ public class TestMono : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log("SAVING");
-            AvatarData temp = GenerateSampleAvatar(SampleAvatarID);
-            mngr.AvatarDatas.Add(temp.DataName, temp);
-            mngr.SaveToJSON(temp.DataName, "Assets/" + temp.DataName + ".json");
+            mngr.SaveToJSON(SampleAvatarID, "Assets/" + SampleAvatarID + ".json");
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Loading");
             mngr.LoadFromJSON("Assets/" + SampleAvatarID + ".json");
+            
+            foreach(PartSlotData slotData in mngr.AvatarDatas[SampleAvatarID].SlotData)
+            {
+                SampleAvatar.Attach(slotData.SlotIndex, slotData.PartID);
+            }
+
         }
 
         if (Input.GetKeyDown(KeyCode.Space))

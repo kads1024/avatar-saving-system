@@ -1,0 +1,79 @@
+{
+    "DataVersion": 1,
+    "DataName": "Humanoid00",
+    "SlotData": [
+        {
+            "SlotIndex": 0,
+            "PartID": "",
+            "TextureIndex": 0,
+            "MainColorIndex": 0,
+            "AccentColorIndex": 0,
+            "SecondaryAccentColorIndex": 0
+        },
+        {
+            "SlotIndex": 1,
+            "PartID": "Base1",
+            "TextureIndex": 0,
+            "MainColorIndex": 0,
+            "AccentColorIndex": 0,
+            "SecondaryAccentColorIndex": 0
+        },
+        {
+            "SlotIndex": 2,
+            "PartID": "Base2",
+            "TextureIndex": 0,
+            "MainColorIndex": 0,
+            "AccentColorIndex": 0,
+            "SecondaryAccentColorIndex": 0
+        },
+        {
+            "SlotIndex": 3,
+            "PartID": "",
+            "TextureIndex": 0,
+            "MainColorIndex": 0,
+            "AccentColorIndex": 0,
+            "SecondaryAccentColorIndex": 0
+        },
+        {
+            "SlotIndex": 4,
+            "PartID": "",
+            "TextureIndex": 0,
+            "MainColorIndex": 0,
+            "AccentColorIndex": 0,
+            "SecondaryAccentColorIndex": 0
+        },
+        {
+            "SlotIndex": 5,
+            "PartID": "",
+            "TextureIndex": 0,
+            "MainColorIndex": 0,
+            "AccentColorIndex": 0,
+            "SecondaryAccentColorIndex": 0
+        },
+        {
+            "SlotIndex": 6,
+            "PartID": "",
+            "TextureIndex": 0,
+            "MainColorIndex": 0,
+            "AccentColorIndex": 0,
+            "SecondaryAccentColorIndex": 0
+        },
+        {
+            "SlotIndex": 7,
+            "PartID": "",
+            "TextureIndex": 0,
+            "MainColorIndex": 0,
+            "AccentColorIndex": 0,
+            "SecondaryAccentColorIndex": 0
+        },
+        {
+            "SlotIndex": 8,
+            "PartID": "",
+            "TextureIndex": 0,
+            "MainColorIndex": 0,
+            "AccentColorIndex": 0,
+            "SecondaryAccentColorIndex": 0
+        }
+    ],
+    "BodySegmentData": []
+}

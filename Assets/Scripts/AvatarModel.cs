@@ -102,7 +102,7 @@ namespace AvatarSavingSystem
 			}
 
 			// Check if provided part is valid
-			AvatarPart avatarPart = Resources.Load<AvatarPart>("AvatarParts/" + p_PartName);
+			AvatarPart avatarPart = Resources.Load<AvatarPart>("AvatarParts/Base/" + p_PartName);
 			if (avatarPart == null || avatarPart.PartPrefab == null)
 			{
 				Debug.LogWarning("Part " + p_PartName + " on slot " + p_Slot + " not found.", this);
@@ -116,7 +116,6 @@ namespace AvatarSavingSystem
 			if (PartAttachments[p_Slot] != null) Destroy(PartAttachments[p_Slot].gameObject);
 
 			// Instantiate the new attachement and save it in both the attachment list
-			Debug.Log("INSTANTIATING " + avatarPart.ToString());
 			PartAttachments[p_Slot] = Instantiate(avatarPart.PartPrefab, transform);
 
 			// Rebind animator in case any new

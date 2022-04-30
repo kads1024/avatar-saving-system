@@ -399,5 +399,11 @@ namespace AvatarSavingSystem
 			// FOR TESTING PURPOSES ONLY
 			renderer.material.SetColor("_Color", mainColor);
 		}
+
+		public void ApplySegmentScale(int index, float scale)
+		{
+			SkinnedMeshRenderer renderer = GetComponentInChildren<SkinnedMeshRenderer>();
+			renderer.SetBlendShapeWeight(index, scale);
+		}
 	}
 }

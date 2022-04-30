@@ -77,7 +77,6 @@ namespace AvatarSavingSystem
 				else
 				{
 					pair.ChildBone.localScale = pair.ParentBone.transform.localScale;
-					Material x;
 				}
 
 				// Update rotation

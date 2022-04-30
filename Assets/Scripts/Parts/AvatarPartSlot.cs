@@ -6,14 +6,14 @@ namespace AvatarSavingSystem
     public class AvatarPartSlot 
     {
 		/// <summary>
+		/// Name of the Slot
+		/// </summary>
+		public string SlotName;
+
+		/// <summary>
 		/// Which slots are incompatible with this slot.
 		/// </summary>
 		public int[] Conflicts;
-
-		/// <summary>
-		/// List of Prefab parts to choose from.
-		/// </summary>
-		public PartAttachment[] PartAttachments;
 
 		/// <summary>
 		/// True if slot is required and must not be empty.

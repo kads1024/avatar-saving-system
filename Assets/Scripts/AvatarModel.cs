@@ -10,7 +10,7 @@ namespace AvatarSavingSystem
 		/// <summary>
 		/// All slots where parts are to be inserted.
 		/// </summary>
-		public AvatarPartSlot[] Slots;
+		public List<AvatarPartSlot> Slots;
 
 		/// <summary>
 		/// Legacy animation to use (If Using Legacy Animation).
@@ -28,11 +28,6 @@ namespace AvatarSavingSystem
 		private PartAttachment[] PartAttachments;
 
 		/// <summary>
-		/// Part index currently animating on each slot or -1 for none.
-		/// </summary>
-		private int[] CurrentlyEquippedParts;
-
-		/// <summary>
 		/// Find attached animation and animator on Awake
 		/// </summary>
 		private void Awake()
@@ -45,11 +40,9 @@ namespace AvatarSavingSystem
         /// Attach default parts on all required slots.
         /// </summary>
         private void Start()
-		{
-			for (int slot = 0; slot < Slots.Length; slot++)
-			{
-				if (Slots[slot].Required) Attach(slot, 0);
-			}
+		{	
+			for (int slot = 0; slot < Slots.Count; slot++)
+				if(Slots[slot].Required) Attach(slot, "Base" + slot.ToString());	
 		}
 
 		/// <summary>
@@ -97,34 +90,34 @@ namespace AvatarSavingSystem
 		/// Replace prefab on a specific slot.
 		/// </summary>
 		/// <param name="p_Slot">Slot to be inserted.</param>
-		/// <param name="p_PartIndex">Index of the part to be used.</param>
-		public void Attach(int p_Slot, int p_PartIndex)
+		/// <param name="p_PartName">Part to be used.</param>
+		public void Attach(int p_Slot, string p_PartName)
 		{
-
+			
 			// Check if provided slot is valid
-			if (p_Slot < 0 || p_Slot >= Slots.Length)
+			if (p_Slot < 0 || p_Slot >= Slots.Count)
 			{
 				Debug.LogWarning("Slot " + p_Slot + " not found.", this);
 				return;
 			}
 
-			// Check if provided part index is valid within the slot
-			if (p_PartIndex < 0 || p_PartIndex >= Slots[p_Slot].PartAttachments.Length)
+			// Check if provided part is valid
+			AvatarPart avatarPart = Resources.Load<AvatarPart>("AvatarParts/" + p_PartName);
+			if (avatarPart == null || avatarPart.PartPrefab == null)
 			{
-				Debug.LogWarning("Part Index " + p_PartIndex + " on slot " + p_Slot + " not found.", this);
+				Debug.LogWarning("Part " + p_PartName + " on slot " + p_Slot + " not found.", this);
 				return;
 			}
 
 			// Resize the part attachments to match the same size as the slots
-			Resize(ref PartAttachments, Slots.Length, null);
-			Resize(ref CurrentlyEquippedParts, Slots.Length, -1);
+			Resize(ref PartAttachments, Slots.Count, null);
 
 			// If attachment already exists, destroy it
 			if (PartAttachments[p_Slot] != null) Destroy(PartAttachments[p_Slot].gameObject);
 
-			// Instantiate the new attachement and save it in both the attachment list and the index list
-			PartAttachments[p_Slot] = Instantiate(Slots[p_Slot].PartAttachments[p_PartIndex], transform);
-			CurrentlyEquippedParts[p_Slot] = p_PartIndex;
+			// Instantiate the new attachement and save it in both the attachment list
+			Debug.Log("INSTANTIATING " + avatarPart.ToString());
+			PartAttachments[p_Slot] = Instantiate(avatarPart.PartPrefab, transform);
 
 			// Rebind animator in case any new
 			if (Animator != null) PartAttachments[p_Slot].Rebind(Animator);
@@ -133,7 +126,7 @@ namespace AvatarSavingSystem
 			// Detach any conflicts
 			foreach (int conflict in Slots[p_Slot].Conflicts)
 			{
-				if (conflict < 0 || conflict >= Slots.Length) continue;
+				if (conflict < 0 || conflict >= Slots.Count) continue;
 				if (conflict == p_Slot) continue;
 				Detach(conflict);
 			}
@@ -148,22 +141,20 @@ namespace AvatarSavingSystem
 		{
 
 			// Check if provided slot is valid
-			if (p_Slot < 0 || p_Slot >= Slots.Length)
+			if (p_Slot < 0 || p_Slot >= Slots.Count)
 			{
 				Debug.LogWarning("Slot " + p_Slot + " not found.", this);
 				return;
 			}
 
 			// Resize the part attachments to match the same size as the slots
-			Resize(ref PartAttachments, Slots.Length, null);
-			Resize(ref CurrentlyEquippedParts, Slots.Length, -1);
+			Resize(ref PartAttachments, Slots.Count, null);
 
 			// Destroy attachment if it exists
 			if (PartAttachments[p_Slot] != null) Destroy(PartAttachments[p_Slot].gameObject);
 
 			// Remove attachment
 			PartAttachments[p_Slot] = null;
-			CurrentlyEquippedParts[p_Slot] = -1;
 
 		}
 
@@ -179,30 +170,6 @@ namespace AvatarSavingSystem
 			for (int i = size; i < p_Length; i++)
 				p_Array[i] = p_Value;
 			
-		}
-
-		/// <summary>
-		/// Get current index of the prefab used on a specific slot or -1 if slot is empty.
-		/// </summary>
-		/// <param name="p_Slot">Slot to check.</param>
-		/// <returns>Prefab index on the slot.</returns>
-		public int GetEquippedPartInSlot(int p_Slot)
-		{
-
-			// Check if provided slot is valid
-			if (p_Slot < 0 || p_Slot >= Slots.Length)
-			{
-				Debug.LogWarning("Slot " + p_Slot + " not found.", this);
-				return -1;
-			}
-
-			// Resize resources
-			Resize(ref PartAttachments, Slots.Length, null);
-			Resize(ref CurrentlyEquippedParts, Slots.Length, -1);
-
-			// Return current prefab index
-			return CurrentlyEquippedParts[p_Slot];
-
 		}
 	}
 }

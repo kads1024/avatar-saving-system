@@ -399,12 +399,84 @@ PrefabInstance:
       value: RobotHumanoid
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: MaximumSlots
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: Slots.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[0].Required
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[0].SlotName
+      value: Arms
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[1].Required
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
-      propertyPath: Slots.Array.data[0].PartAttachments.Array.size
+      propertyPath: Slots.Array.data[1].SlotName
+      value: Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[2].Required
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[2].SlotName
+      value: Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[3].Required
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[3].SlotName
+      value: Hat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[4].Required
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[4].SlotName
+      value: Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[5].SlotName
+      value: Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[6].Required
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[6].SlotName
+      value: Pants
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[7].Required
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[7].SlotName
+      value: Shirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[8].Required
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[8].SlotName
+      value: Torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: Slots.Array.data[0].PartAttachments.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: Slots.Array.data[0].PartAttachments.Array.data[0]

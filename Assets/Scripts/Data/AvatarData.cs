@@ -30,8 +30,12 @@ namespace AvatarSavingSystem
         {
             DataVersion = p_DataVersion;
             DataName = p_DataName;
-            SlotData = new List<PartSlotData>(p_SlotCapacity);
-            BodySegmentData = new List<SegmentScaleData>(p_SegmentCapacity);
+
+            SlotData = new List<PartSlotData>();
+            for (int i = 0; i < p_SlotCapacity; i++) SlotData.Add(new PartSlotData() { SlotIndex = i });
+
+            BodySegmentData = new List<SegmentScaleData>();
+            for (int i = 0; i < p_SegmentCapacity; i++) BodySegmentData.Add(new SegmentScaleData());
         }
     }
 

@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mngr: {fileID: 11400000, guid: 67390c8fce678f74caa25438f027d568, type: 2}
+  SampleAvatarID: Humanoid00
 --- !u!4 &1886714582
 Transform:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class TestMono : MonoBehaviour
 {
     [SerializeField] AvatarDataManager mngr;
-
+    [SerializeField] string SampleAvatarID;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,7 @@ public class TestMono : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log("SAVING");
-            AvatarData temp = GenerateSampleAvatar("Test");
+            AvatarData temp = GenerateSampleAvatar(SampleAvatarID);
             mngr.AvatarDatas.Add(temp.DataName, temp);
             mngr.SaveToJSON(temp.DataName, "Assets/" + temp.DataName + ".json");
         }
@@ -37,12 +37,13 @@ public class TestMono : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Loading");
-            mngr.LoadFromJSON("Assets/Test.json");
+            mngr.LoadFromJSON("Assets/" + SampleAvatarID + ".json");
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log(JsonUtility.ToJson(mngr.AvatarDatas["Test"], true));
+            Debug.Log(mngr.AvatarDatas[SampleAvatarID].SlotData.Count);
+            Debug.Log(JsonUtility.ToJson(mngr.AvatarDatas[SampleAvatarID], true));
         }
 
     }

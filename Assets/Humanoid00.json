@@ -14,7 +14,7 @@
             "SlotIndex": 1,
             "PartID": "Base1",
             "TextureIndex": 0,
-            "MainColorIndex": 0,
+            "MainColorIndex": 1,
             "AccentColorIndex": 0,
             "SecondaryAccentColorIndex": 0
         },
@@ -22,7 +22,7 @@
             "SlotIndex": 2,
             "PartID": "Base2",
             "TextureIndex": 0,
-            "MainColorIndex": 0,
+            "MainColorIndex": 1,
             "AccentColorIndex": 0,
             "SecondaryAccentColorIndex": 0
         },

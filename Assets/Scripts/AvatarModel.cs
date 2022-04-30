@@ -20,17 +20,17 @@ namespace AvatarSavingSystem
 		/// <summary>
 		/// All slots where parts are to be inserted.
 		/// </summary>
-		public List<AvatarPartSlot> Slots;
+		[SerializeField] private List<AvatarPartSlot> _slots;
 
 		/// <summary>
 		/// Legacy animation to use (If Using Legacy Animation).
 		/// </summary>
-		public Animation LegacyAnimation;
+		[SerializeField] private Animation _legacyAnimation;
 
 		/// <summary>
 		/// Animation controller to use
 		/// </summary>
-		public Animator Animator;
+		[SerializeField] private Animator _animator;
 
 		/// <summary>
 		/// All Part attachments currently  inserted.
@@ -42,8 +42,8 @@ namespace AvatarSavingSystem
 		/// </summary>
 		private void Awake()
         {
-			LegacyAnimation = GetComponent<Animation>();
-			Animator = GetComponent<Animator>();
+			_legacyAnimation = GetComponent<Animation>();
+			_animator = GetComponent<Animator>();
 		}
 
         /// <summary>
@@ -54,12 +54,12 @@ namespace AvatarSavingSystem
 			// Initialize Data for this model into the datamanager
 			if (!_dataManager.AvatarDatas.ContainsKey(_avatarID))
 			{
-				AvatarData newData = new AvatarData(1, _avatarID, Slots.Count, 0);
+				AvatarData newData = new AvatarData(1, _avatarID, _slots.Count, 0);
 				_dataManager.AvatarDatas.Add(_avatarID, newData);
 			}
 
-			for (int slot = 0; slot < Slots.Count; slot++)
-				if(Slots[slot].Required) Attach(slot, "Base" + slot.ToString());		
+			for (int slot = 0; slot < _slots.Count; slot++)
+				if(_slots[slot].Required) Attach(slot, "Base" + slot.ToString());		
 		}
 
 		/// <summary>
@@ -67,8 +67,8 @@ namespace AvatarSavingSystem
 		/// </summary>
 		private void Reset()
 		{
-			LegacyAnimation = GetComponent<Animation>();
-			Animator = GetComponent<Animator>();
+			_legacyAnimation = GetComponent<Animation>();
+			_animator = GetComponent<Animator>();
 		}
 
 		/// <summary>
@@ -77,7 +77,7 @@ namespace AvatarSavingSystem
 		/// <param name="animation">Animation to use.</param>
 		public void Rebind(Animation animation)
 		{
-			LegacyAnimation = animation;
+			_legacyAnimation = animation;
 			if (PartAttachments != null)
 			{
 				foreach (PartAttachment attachment in PartAttachments)
@@ -93,7 +93,7 @@ namespace AvatarSavingSystem
 		/// <param name="animator">Animator to use.</param>
 		public void Rebind(Animator animator)
 		{
-			Animator = animator;
+			_animator = animator;
 			if (PartAttachments != null)
 			{
 				foreach (PartAttachment attachment in PartAttachments)
@@ -112,7 +112,7 @@ namespace AvatarSavingSystem
 		{
 			
 			// Check if provided slot is valid
-			if (p_Slot < 0 || p_Slot >= Slots.Count)
+			if (p_Slot < 0 || p_Slot >= _slots.Count)
 			{
 				Debug.LogWarning("Slot " + p_Slot + " not found.", this);
 				return;
@@ -127,7 +127,7 @@ namespace AvatarSavingSystem
 			}
 
 			// Resize the part attachments to match the same size as the slots
-			Resize(ref PartAttachments, Slots.Count, null);
+			Resize(ref PartAttachments, _slots.Count, null);
 			
 			// If attachment already exists, destroy it
 			if (PartAttachments[p_Slot] != null) Destroy(PartAttachments[p_Slot].gameObject);
@@ -137,16 +137,23 @@ namespace AvatarSavingSystem
 
 			// Save Slot Data
 			if(_dataManager.AvatarDatas[_avatarID].SlotData.Count > p_Slot)
-				Slots[p_Slot].SlotData = _dataManager.AvatarDatas[_avatarID].SlotData[p_Slot];
+				_slots[p_Slot].SlotData = _dataManager.AvatarDatas[_avatarID].SlotData[p_Slot];
+
+			// Apply Texture and Color
+			PartAttachments[p_Slot].ApplyPartData(
+				avatarPart.Textures[_slots[p_Slot].SlotData.TextureIndex], 
+				avatarPart.MainColors[_slots[p_Slot].SlotData.MainColorIndex], 
+				avatarPart.AccentColors[_slots[p_Slot].SlotData.AccentColorIndex], 
+				avatarPart.SecondaryAccentColors[_slots[p_Slot].SlotData.SecondaryAccentColorIndex]);
 
 			// Rebind animator in case any new
-			if (Animator != null) PartAttachments[p_Slot].Rebind(Animator);
-			if (LegacyAnimation != null) PartAttachments[p_Slot].Rebind(LegacyAnimation);
+			if (_animator != null) PartAttachments[p_Slot].Rebind(_animator);
+			if (_legacyAnimation != null) PartAttachments[p_Slot].Rebind(_legacyAnimation);
 
 			// Detach any conflicts
-			foreach (int conflict in Slots[p_Slot].Conflicts)
+			foreach (int conflict in _slots[p_Slot].Conflicts)
 			{
-				if (conflict < 0 || conflict >= Slots.Count) continue;
+				if (conflict < 0 || conflict >= _slots.Count) continue;
 				if (conflict == p_Slot) continue;
 				Detach(conflict);
 			}
@@ -161,14 +168,14 @@ namespace AvatarSavingSystem
 		{
 
 			// Check if provided slot is valid
-			if (p_Slot < 0 || p_Slot >= Slots.Count)
+			if (p_Slot < 0 || p_Slot >= _slots.Count)
 			{
 				Debug.LogWarning("Slot " + p_Slot + " not found.", this);
 				return;
 			}
 
 			// Resize the part attachments to match the same size as the slots
-			Resize(ref PartAttachments, Slots.Count, null);
+			Resize(ref PartAttachments, _slots.Count, null);
 
 			// Destroy attachment if it exists
 			if (PartAttachments[p_Slot] != null) Destroy(PartAttachments[p_Slot].gameObject);

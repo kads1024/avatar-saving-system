@@ -386,5 +386,18 @@ namespace AvatarSavingSystem
 			}
 			return null;
 		}
+
+		public void ApplyPartData(Texture texture, Color mainColor, Color accentColor, Color secondaryAccentColor)
+        {
+			SkinnedMeshRenderer renderer = GetComponentInChildren<SkinnedMeshRenderer>();
+			renderer.material.mainTexture = texture;
+			
+			renderer.material.SetColor("MainColor", mainColor);
+			renderer.material.SetColor("AccentColor", accentColor);
+			renderer.material.SetColor("SecondaryAccentColor", secondaryAccentColor);
+
+			// FOR TESTING PURPOSES ONLY
+			renderer.material.SetColor("_Color", mainColor);
+		}
 	}
 }

@@ -428,6 +428,10 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: Slots.Array.data[0].Required
       value: 1
       objectReference: {fileID: 0}
@@ -493,6 +497,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: Slots.Array.data[8].SlotName
+      value: Torso
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[0].Required
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[0].SlotName
+      value: Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[1].SlotName
+      value: Boot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[2].SlotName
+      value: Glove
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[3].SlotName
+      value: Hat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[4].Required
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[4].SlotName
+      value: Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[5].Required
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[5].SlotName
+      value: Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[6].SlotName
+      value: Pants
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[7].SlotName
+      value: Shirt
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[8].Required
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[8].SlotName
       value: Torso
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}

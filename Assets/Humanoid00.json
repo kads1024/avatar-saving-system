@@ -12,7 +12,7 @@
             "BodySegmentData": []
         },
         {
-            "SlotIndex": 0,
+            "SlotIndex": 1,
             "PartID": "",
             "TextureIndex": 0,
             "MainColorIndex": 0,
@@ -21,7 +21,7 @@
             "BodySegmentData": []
         },
         {
-            "SlotIndex": 0,
+            "SlotIndex": 2,
             "PartID": "",
             "TextureIndex": 0,
             "MainColorIndex": 0,
@@ -30,7 +30,7 @@
             "BodySegmentData": []
         },
         {
-            "SlotIndex": 0,
+            "SlotIndex": 3,
             "PartID": "",
             "TextureIndex": 0,
             "MainColorIndex": 0,
@@ -57,7 +57,7 @@
             "BodySegmentData": []
         },
         {
-            "SlotIndex": 0,
+            "SlotIndex": 6,
             "PartID": "",
             "TextureIndex": 0,
             "MainColorIndex": 0,
@@ -66,7 +66,7 @@
             "BodySegmentData": []
         },
         {
-            "SlotIndex": 0,
+            "SlotIndex": 7,
             "PartID": "",
             "TextureIndex": 0,
             "MainColorIndex": 0,
@@ -76,6 +76,15 @@
         },
         {
             "SlotIndex": 8,
+            "PartID": "",
+            "TextureIndex": 0,
+            "MainColorIndex": 0,
+            "AccentColorIndex": 0,
+            "SecondaryAccentColorIndex": 0,
+            "BodySegmentData": []
+        },
+        {
+            "SlotIndex": 9,
             "PartID": "",
             "TextureIndex": 0,
             "MainColorIndex": 0,

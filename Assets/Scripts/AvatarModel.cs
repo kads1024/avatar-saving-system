@@ -7,6 +7,8 @@ namespace AvatarSavingSystem
 {
     public class AvatarModel : MonoBehaviour
     {
+		private const string AVATAR_PARTS_PATH = "AvatarParts/";
+
 		/// <summary>
 		/// Avatar ID of this model
 		/// </summary>
@@ -119,7 +121,7 @@ namespace AvatarSavingSystem
 			}
 
 			// Check if provided part is valid
-			AvatarPart avatarPart = Resources.Load<AvatarPart>("AvatarParts/Base/" + p_PartName);
+			AvatarPart avatarPart = Resources.Load<AvatarPart>(AVATAR_PARTS_PATH + _slots[p_Slot].SlotName + "/" + p_PartName);
 			if (avatarPart == null || avatarPart.PartPrefab == null)
 			{
 				Debug.LogWarning("Part " + p_PartName + " on slot " + p_Slot + " not found.", this);
@@ -137,7 +139,11 @@ namespace AvatarSavingSystem
 
 			// Save Slot Data
 			if(_dataManager.AvatarDatas[_avatarID].SlotData.Count > p_Slot)
+            {
+				Debug.Log("Saving Slot: " + p_Slot, this);
 				_slots[p_Slot].SlotData = _dataManager.AvatarDatas[_avatarID].SlotData[p_Slot];
+			}
+				
 
 			// Apply Texture and Color
 			Texture texture = _slots[p_Slot].SlotData.TextureIndex < avatarPart.Textures.Count ? avatarPart.Textures[_slots[p_Slot].SlotData.TextureIndex] : avatarPart.Textures[0];
@@ -207,6 +213,9 @@ namespace AvatarSavingSystem
 			
 		}
 
+		/// <summary>
+		/// Saves the avatar configuration to json
+		/// </summary>
 		public void SaveAvatarConfiguration()
         {
 			for (int i = 0; i < _slots.Count; i++)            

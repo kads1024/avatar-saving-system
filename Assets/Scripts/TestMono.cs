@@ -7,6 +7,18 @@ public class TestMono : MonoBehaviour
     [SerializeField] string SampleAvatarID;
     [SerializeField] AvatarModel SampleAvatar;
 
+    [SerializeField] string ArmsID;
+    [SerializeField] string BootsID;
+    [SerializeField] string GlovesID;
+    [SerializeField] string HatsID;
+    [SerializeField] string HeadsID;
+    [SerializeField] string LegsID;
+    [SerializeField] string PantsID;
+    [SerializeField] string ShirtsID;
+    [SerializeField] string TorsosID;
+    [SerializeField] string RiflesID;
+    [SerializeField] string Balls;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,5 +60,24 @@ public class TestMono : MonoBehaviour
             Debug.Log(JsonUtility.ToJson(mngr.AvatarDatas[SampleAvatarID], true));
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            UpdateAvatar();
+        }
+
+    }
+
+    public void UpdateAvatar()
+    {
+        SampleAvatar.Attach(0, ArmsID);
+        SampleAvatar.Attach(1, BootsID);
+        SampleAvatar.Attach(2, GlovesID);
+        SampleAvatar.Attach(3, HatsID);
+        SampleAvatar.Attach(4, HeadsID);
+        SampleAvatar.Attach(5, LegsID);
+        SampleAvatar.Attach(6, PantsID);
+        SampleAvatar.Attach(7, ShirtsID);
+        SampleAvatar.Attach(8, TorsosID);
+        SampleAvatar.Attach(9, RiflesID);
     }
 }

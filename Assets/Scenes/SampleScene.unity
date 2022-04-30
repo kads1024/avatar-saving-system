@@ -342,6 +342,17 @@ MonoBehaviour:
   mngr: {fileID: 11400000, guid: 67390c8fce678f74caa25438f027d568, type: 2}
   SampleAvatarID: Humanoid00
   SampleAvatar: {fileID: 1883532556}
+  ArmsID: Arms00
+  BootsID: Boot00
+  GlovesID: Glove00
+  HatsID: Hat00
+  HeadsID: Head00
+  LegsID: Leg00
+  PantsID: Pants00
+  ShirtsID: Shirt00
+  TorsosID: Torso00
+  RiflesID: Rifle00
+  Balls: Ball00
 --- !u!4 &1886714582
 Transform:
   m_ObjectHideFlags: 0
@@ -429,7 +440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.size
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: Slots.Array.data[0].Required
@@ -505,19 +516,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.data[0].SlotName
-      value: Arm
+      value: Arms
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.data[1].SlotName
-      value: Boot
+      value: Boots
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.data[2].SlotName
-      value: Glove
+      value: Gloves
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.data[3].SlotName
-      value: Hat
+      value: Hats
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.data[4].Required
@@ -525,7 +536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.data[4].SlotName
-      value: Head
+      value: Heads
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.data[5].Required
@@ -533,7 +544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.data[5].SlotName
-      value: Leg
+      value: Legs
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.data[6].SlotName
@@ -541,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.data[7].SlotName
-      value: Shirt
+      value: Shirts
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.data[8].Required
@@ -549,7 +560,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: _slots.Array.data[8].SlotName
-      value: Torso
+      value: Torsos
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[9].Required
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[9].SlotName
+      value: Rifles
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[10].Required
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
+      propertyPath: _slots.Array.data[10].SlotName
+      value: Balls
       objectReference: {fileID: 0}
     - target: {fileID: 3919043336664513538, guid: cc270cd94b2659440a116d9ae38596e1, type: 3}
       propertyPath: Slots.Array.data[0].PartAttachments.Array.size

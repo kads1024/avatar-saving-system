@@ -150,10 +150,14 @@ namespace AvatarSavingSystem
 				
 
 			// Apply Texture and Color
-			Texture texture = p_PartSlotData.TextureIndex < avatarPart.Textures.Count ? avatarPart.Textures[p_PartSlotData.TextureIndex] : avatarPart.Textures[0];
-			Color main = p_PartSlotData.MainColorIndex < avatarPart.MainColors.Count ? avatarPart.MainColors[p_PartSlotData.MainColorIndex] : avatarPart.MainColors[0];
-			Color accent = p_PartSlotData.AccentColorIndex < avatarPart.AccentColors.Count ? avatarPart.AccentColors[p_PartSlotData.AccentColorIndex] : avatarPart.AccentColors[0];
-			Color secondaryAccent = p_PartSlotData.SecondaryAccentColorIndex < avatarPart.SecondaryAccentColors.Count ? avatarPart.SecondaryAccentColors[p_PartSlotData.SecondaryAccentColorIndex] : avatarPart.SecondaryAccentColors[0];
+			Texture texture = p_PartSlotData.TextureIndex < avatarPart.Textures.Count && p_PartSlotData.TextureIndex >= 0 ? 
+				avatarPart.Textures[p_PartSlotData.TextureIndex] : avatarPart.Textures[0];
+			Color main = p_PartSlotData.MainColorIndex < avatarPart.MainColors.Count && p_PartSlotData.MainColorIndex >= 0 ? 
+				avatarPart.MainColors[p_PartSlotData.MainColorIndex] : avatarPart.MainColors[0];
+			Color accent = p_PartSlotData.AccentColorIndex < avatarPart.AccentColors.Count && p_PartSlotData.AccentColorIndex >= 0 ? 
+				avatarPart.AccentColors[p_PartSlotData.AccentColorIndex] : avatarPart.AccentColors[0];
+			Color secondaryAccent = p_PartSlotData.SecondaryAccentColorIndex < avatarPart.SecondaryAccentColors.Count && p_PartSlotData.SecondaryAccentColorIndex >= 0 ? 
+				avatarPart.SecondaryAccentColors[p_PartSlotData.SecondaryAccentColorIndex] : avatarPart.SecondaryAccentColors[0];
 
 			PartAttachments[p_PartSlotData.SlotIndex].ApplyPartData(texture, main, accent, secondaryAccent);
 

@@ -1,14 +1,14 @@
 {
-    "DataVersion": 5,
+    "DataVersion": 2,
     "DataName": "Humanoid00",
     "SlotData": [
         {
             "SlotIndex": 0,
             "PartID": "Arms00",
-            "TextureIndex": 0,
-            "MainColorIndex": 0,
-            "AccentColorIndex": 0,
-            "SecondaryAccentColorIndex": 0,
+            "TextureIndex": -1,
+            "MainColorIndex": -1,
+            "AccentColorIndex": -1,
+            "SecondaryAccentColorIndex": -1,
             "BodySegmentData": []
         },
         {

@@ -228,8 +228,6 @@ namespace AvatarSavingSystem
         {
 			for (int i = 0; i < _slots.Count; i++)            
 				_dataManager.AvatarDatas[_avatarID].SlotData[i] = _slots[i].SlotData;
-
-			_dataManager.SaveToJSON(_avatarID, "Assets/" + _avatarID + ".json");
         }
 	}
 }

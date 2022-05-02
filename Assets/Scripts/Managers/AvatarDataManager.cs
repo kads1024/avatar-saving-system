@@ -76,9 +76,6 @@ namespace AvatarSavingSystem
                     _avatarDatas[data.DataName] = data;
                 else
                     _avatarDatas.Add(data.DataName, data);
-              
-                
-                // TODO: Assign and Apply Avatar Data
 
                 return true;
             }

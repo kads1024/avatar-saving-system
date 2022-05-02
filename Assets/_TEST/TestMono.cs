@@ -45,12 +45,13 @@ public class TestMono : MonoBehaviour
         {
             Debug.Log("SAVING");
             SampleAvatar.SaveAvatarConfiguration();
+            mngr.SaveToJSON(SampleAvatarID, "_TEST/Assets/" + SampleAvatarID + ".json");
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Loading");
-            mngr.LoadFromJSON("Assets/" + SampleAvatarID + ".json");
+            mngr.LoadFromJSON("_TEST/Assets/" + SampleAvatarID + ".json");
             
             foreach(PartSlotData slotData in mngr.AvatarDatas[SampleAvatarID].SlotData)
             {

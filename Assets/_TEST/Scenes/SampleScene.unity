@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 1886714582}
   - component: {fileID: 1886714581}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: _TEST
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,6 +339,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eacd82f32fc646940af48de227bdbdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  avatarParts:
+  - m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   mngr: {fileID: 11400000, guid: 67390c8fce678f74caa25438f027d568, type: 2}
   SampleAvatarID: Humanoid00
   SampleAvatar: {fileID: 1883532556}

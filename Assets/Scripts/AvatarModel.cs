@@ -27,12 +27,12 @@ namespace AvatarSavingSystem
 		/// <summary>
 		/// Legacy animation to use (If Using Legacy Animation).
 		/// </summary>
-		[SerializeField] private Animation _legacyAnimation;
+		private Animation _legacyAnimation;
 
 		/// <summary>
 		/// Animation controller to use
 		/// </summary>
-		[SerializeField] private Animator _animator;
+		private Animator _animator;
 
 		/// <summary>
 		/// All Part attachments currently  inserted.

@@ -1,8 +1,12 @@
 using AvatarSavingSystem;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.AddressableAssets;
+
 public class TestMono : MonoBehaviour
 {
+    [SerializeField] List<AssetReference> avatarParts;
+
     [SerializeField] AvatarDataManager mngr;
     [SerializeField] string SampleAvatarID;
     [SerializeField] AvatarModel SampleAvatar;
@@ -22,7 +26,7 @@ public class TestMono : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     AvatarData GenerateSampleAvatar(string p_Name)
@@ -80,4 +84,5 @@ public class TestMono : MonoBehaviour
         SampleAvatar.Attach(TorsosID);
         SampleAvatar.Attach(RiflesID);
     }
+
 }

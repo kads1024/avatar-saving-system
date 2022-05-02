@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: AvatarParts
+  m_EditorClassIdentifier: 
+  m_GroupName: AvatarParts
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 343b534f091adb749a0647510a374094
+  m_SerializeEntries:
+  - m_GUID: b57068152c605934a914d901d33aa5a1
+    m_Address: Assets/SampleAddressables/AvatarParts/Torsos/Torso00.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 644f5e9a1f2dcd044b007cee4b0fd0f7
+    m_Address: Assets/SampleAddressables/AvatarParts/Torsos/Base8.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1e0b2e1933dbd124c8594534cba2c154
+    m_Address: Assets/SampleAddressables/AvatarParts/Shirts/Shirt01.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2688b454f14efb249a5770a7c2dcebf4
+    m_Address: Assets/SampleAddressables/AvatarParts/Shirts/Shirt00.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 56d72ad1f3fdbc14db31cc4870f7b599
+    m_Address: Assets/SampleAddressables/AvatarParts/Shirts/Base7.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cf6478ade7f25c84f94a1e4786e652a8
+    m_Address: Assets/SampleAddressables/AvatarParts/Rifles/Rifle00.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7d49f7b4dd2e4f04ab7b08865927167b
+    m_Address: Assets/SampleAddressables/AvatarParts/Rifles/Base9.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b63218ac88efb744e8a31818ad4d8302
+    m_Address: Assets/SampleAddressables/AvatarParts/Pants/Pants01.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 81bedfde4a565d440b32840b22aa8810
+    m_Address: Assets/SampleAddressables/AvatarParts/Pants/Pants00.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4a0a2580f45fae6408ea51c367a2d354
+    m_Address: Assets/SampleAddressables/AvatarParts/Pants/Base6.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6be09f0493bb97048a81261ba878968f
+    m_Address: Assets/SampleAddressables/AvatarParts/Legs/Leg00.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 70a29bd5613170346b1e5cd45d8a1555
+    m_Address: Assets/SampleAddressables/AvatarParts/Legs/Base5.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 49b66113791ab4d4285f13264ab76666
+    m_Address: Assets/SampleAddressables/AvatarParts/Heads/Head02.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1f152b4b28ec3cb48b20301772f0571a
+    m_Address: Assets/SampleAddressables/AvatarParts/Heads/Head01.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d038023c50baf264f982c3364328a1cd
+    m_Address: Assets/SampleAddressables/AvatarParts/Heads/Head00.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b5e2caa83f085744fa08dd8b3bc300cf
+    m_Address: Assets/SampleAddressables/AvatarParts/Heads/Base4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3a2fc36bc520b854a955737e9f087a94
+    m_Address: Assets/SampleAddressables/AvatarParts/Hats/Hat01.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c23fe11025b80784ab05e334b445500d
+    m_Address: Assets/SampleAddressables/AvatarParts/Hats/Hat00.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5f52fc83d88558e4fafcdcfea11916a7
+    m_Address: Assets/SampleAddressables/AvatarParts/Hats/Base3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bfcd3d1f4d2ed444fbdab6f18076ed2d
+    m_Address: Assets/SampleAddressables/AvatarParts/Gloves/Glove01.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5244b6ea122e385489ee7c3b57e6dcaf
+    m_Address: Assets/SampleAddressables/AvatarParts/Gloves/Glove00.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 965f75fadaf5c5641a300625608ce656
+    m_Address: Assets/SampleAddressables/AvatarParts/Gloves/Base2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0e811b96f58db6349990b544c7586c21
+    m_Address: Assets/SampleAddressables/AvatarParts/Boots/Boot00.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6c7436d75826ad74993132c78e87aa2d
+    m_Address: Assets/SampleAddressables/AvatarParts/Boots/Base1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d0b18316e453eba4f955c69f04c30de9
+    m_Address: Assets/SampleAddressables/AvatarParts/Balls/Base10.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ce785209c19d96d419a0c6a5ad44ace0
+    m_Address: Assets/SampleAddressables/AvatarParts/Balls/Ball00.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dc34319900380444ead1feb9afab64fa
+    m_Address: Assets/SampleAddressables/AvatarParts/Arms/Base0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d8b33b415cec65740b7c93c98ebf35d7
+    m_Address: Assets/SampleAddressables/AvatarParts/Arms/Arms00.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5cc0137307b549d4b9b2c1cb6f557ebb, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b564e27fdc44d4d4ea957dfbb0622a93, type: 2}
+    - {fileID: 11400000, guid: e2bed262b42818544b7360267514ecbb, type: 2}
